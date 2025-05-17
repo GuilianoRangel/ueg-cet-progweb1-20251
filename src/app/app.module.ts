@@ -19,6 +19,9 @@ import {
   MatTable
 } from '@angular/material/table';
 import {MatCheckbox} from '@angular/material/checkbox';
+import {MatFormField, MatInput} from "@angular/material/input";
+import {FormsModule} from '@angular/forms';
+import {MatLabel} from '@angular/material/form-field';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,10 @@ import {MatCheckbox} from '@angular/material/checkbox';
     MatRowDef,
     MatHeaderCellDef,
     MatCellDef,
+    FormsModule,
+    MatLabel,
+    MatInput,
+    MatFormField,
   ],
   providers: [],
   bootstrap: [AppComponent]

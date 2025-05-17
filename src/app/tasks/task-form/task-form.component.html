@@ -1,14 +1,17 @@
+<form>
 <mat-card>
   <mat-card-title>
     <mat-card-header>Cadastro de Tarefa</mat-card-header>
   </mat-card-title>
   <mat-card-content>
-
-      <input [value]="task.description">
-
+    <mat-form-field>
+      <mat-label>Descrição da tarefa</mat-label>
+      <input matInput [value]="task.description" (change)="refreshTask($event)">
+    </mat-form-field>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button >Salvar</button>
-    <button mat-raised-button> cancelar</button>
+    <button mat-raised-button (click)="addTask()">Salvar</button>
+    <button mat-raised-button [routerLink]="['/']"> cancelar</button>
   </mat-card-actions>
 </mat-card>
+</form>

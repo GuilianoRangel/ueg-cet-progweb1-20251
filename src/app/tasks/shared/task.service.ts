@@ -27,8 +27,8 @@ export class TaskService {
   }
   addTask(task: Task) {
     let length = this.tasks.length ?? 0;
-    let task1 = this.tasks[length-1];
-    task.id = (task1.id ?? 0) + 1;
+    let lastTask = this.tasks[length-1];
+    task.id = (lastTask.id ?? 0) + 1;
     //task.id = this.tasks[this.tasks.length-1].id+1;
     task.completed = false;
     this.tasks.push(task);
