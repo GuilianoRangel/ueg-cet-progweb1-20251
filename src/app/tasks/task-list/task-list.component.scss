@@ -9,3 +9,17 @@ mat-card {
 mat-card-title{
   padding: 10px;
 }
+
+.title-mat-card-with-action{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title-mat-card{
+  display: flex;
+}
+
+.mat-card-action{
+  display: flex;
+}
