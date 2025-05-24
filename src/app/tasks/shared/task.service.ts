@@ -25,6 +25,12 @@ export class TaskService {
   getTasks() {
     return this.tasks;
   }
+
+  getTask(id: number) {
+    return this.tasks.find(task => task.id === id);
+  }
+
+
   addTask(task: Task) {
     let length = this.tasks.length ?? 0;
     let lastTask = this.tasks[length-1];
@@ -35,5 +41,12 @@ export class TaskService {
   }
   removeTask(id: number) {
     this.tasks = this.tasks.filter(task => task.id !== id);
+  }
+
+  updateTask(task: Task) {
+    console.log('Tarefa atualizada',JSON.stringify(task));
+    const taskDb = this.getTask(task.id??0);
+    taskDb!.description = task.description;
+    //taskDb!.completed = task.completed;
   }
 }

@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {MatToolbar} from "@angular/material/toolbar";
-import {MatButton} from '@angular/material/button';
+import {MatButton, MatIconButton} from '@angular/material/button';
 import { TaskListComponent } from './tasks/task-list/task-list.component';
 import { TaskListItemComponent } from './tasks/task-list-item/task-list-item.component';
 import { TaskFormComponent } from './tasks/task-form/task-form.component';
@@ -22,6 +22,7 @@ import {MatCheckbox} from '@angular/material/checkbox';
 import {MatFormField, MatInput} from "@angular/material/input";
 import {FormsModule} from '@angular/forms';
 import {MatLabel} from '@angular/material/form-field';
+import {MatIcon} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,8 @@ import {MatLabel} from '@angular/material/form-field';
     MatLabel,
     MatInput,
     MatFormField,
+    MatIconButton,
+    MatIcon,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,10 +24,13 @@
 
     <!-- Ação (Checkbox) -->
     <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef> Concluir</th>
+      <th mat-header-cell *matHeaderCellDef> Concluir/Editar</th>
       <td mat-cell *matCellDef="let task">
         <mat-checkbox [checked]="task.completed" (change)="toggleCompleted(task)">
         </mat-checkbox>
+        <button mat-icon-button [routerLink]="['task', task.id]">
+          <mat-icon>edit</mat-icon>
+        </button>
       </td>
     </ng-container>
 

@@ -6,12 +6,12 @@
   <mat-card-content>
     <mat-form-field>
       <mat-label>Descrição da tarefa</mat-label>
-      <input matInput [value]="task.description" (change)="refreshTask($event)">
+      <input matInput [value]="taskValue.description" (change)="refreshTask($event)">
     </mat-form-field>
   </mat-card-content>
   <mat-card-actions>
-    <button mat-raised-button (click)="addTask()">Salvar</button>
-    <button mat-raised-button [routerLink]="['/']"> cancelar</button>
+    <button mat-raised-button (click)="saveTask()">Salvar</button>
+    <button mat-raised-button (click)="navigateToHome()"> cancelar</button>
   </mat-card-actions>
 </mat-card>
 </form>
