@@ -13,7 +13,7 @@ export class TaskListComponent {
   dataSource = new MatTableDataSource<Task>();
 
   constructor(private taskService: TaskService) {
-    this.dataSource.data = this.taskService.getTasks();
+    this.updateTable();
   }
 
 
@@ -21,5 +21,15 @@ export class TaskListComponent {
 
   toggleCompleted(task: Task): void {
     task.completed = !task.completed;
+  }
+
+  remover(task: Task) {
+    console.log('Tarefa removida',JSON.stringify(task));
+    this.taskService.removeTask(task.id ?? 0);
+    this.updateTable();
+  }
+
+  private updateTable() {
+    this.dataSource.data = this.taskService.getTasks();
   }
 }

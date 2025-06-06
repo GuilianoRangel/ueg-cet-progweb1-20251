@@ -31,6 +31,9 @@
         <button mat-icon-button [routerLink]="['task', task.id]">
           <mat-icon>edit</mat-icon>
         </button>
+        <button mat-icon-button (click)="remover(task)">
+          <mat-icon>delete</mat-icon>
+        </button>
       </td>
     </ng-container>
 

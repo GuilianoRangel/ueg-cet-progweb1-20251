@@ -40,7 +40,10 @@ export class TaskService {
     this.tasks.push(task);
   }
   removeTask(id: number) {
+    console.log('Tarefa removida',id);
+    console.log("tasks antes remoção:",JSON.stringify(this.tasks))
     this.tasks = this.tasks.filter(task => task.id !== id);
+    console.log("tasks depois remoção:",JSON.stringify(this.tasks))
   }
 
   updateTask(task: Task) {
